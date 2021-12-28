@@ -22,7 +22,6 @@ $width: 60px;
   // height: 44px;
   line-height: 44px;
   text-align: center;
-  background-color: var(--color-tint);
   .left,
   .right {
     width: $width;

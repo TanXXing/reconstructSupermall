@@ -1,6 +1,6 @@
 <template>
-  <div class="goods-item">
-    <img :src="goodsItem.showLarge.img" alt="" @load="imageLoad" />
+  <div class="goods-item" @click="goodsItemClick">
+    <img :src="showImage" alt="" @load="imageLoad" />
     <!-- 这里使用了一个div就可以把图片和后面的内容分开 -->
     <div class="goods-info">
       <!-- 这里再使用一个p标签就把p和后面的内容分开了，并保证不在同一行的问题 -->
@@ -25,10 +25,31 @@ export default {
   data() {
     return {}
   },
+  computed: {
+    showImage() {
+      return this.goodsItem.showLarge
+        ? this.goodsItem.showLarge.img
+        : this.goodsItem.image
+    }
+  },
   methods: {
     imageLoad() {
-      this.$bus.$emit('goodsItemImgLoading')
-      // console.log('发出事件了吗？')
+      // console.log('图片加载了')
+      this.$bus.$emit('goodsItemLoading')
+    },
+    goodsItemClick() {
+      console.log('goodItemClick点击了')
+      console.log(this.goodsItem.iid)
+      // 点击后，进行路由动态路由匹配以及
+      /* this.$router.push({
+        path: `/user/${this.goodsItem.iid}`
+      }) */
+      this.$router.push({
+        name: 'detail',
+        params: {
+          iid: this.goodsItem.iid
+        }
+      })
     }
   }
 }

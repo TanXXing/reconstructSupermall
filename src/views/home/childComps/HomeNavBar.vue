@@ -22,5 +22,6 @@ export default {
 .home-nav {
   position: relative;
   z-index: 9;
+  background-color: var(--color-tint);
 }
 </style>

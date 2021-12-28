@@ -46,7 +46,7 @@ export default {
       // 绑定事件,在滚动的时候，触发
       this.scroll.on('scroll', (position) => {
         // console.log(this.probeType)
-        // console.log(position)
+
         this.$emit('scroll', position.y)
       })
 
@@ -67,6 +67,9 @@ export default {
     },
     scrollTo(x, y, time = 1000) {
       this.scroll && this.scroll.scrollTo(x, y, time)
+    },
+    getScrollY() {
+      return this.scroll ? this.scroll.y : 0
     }
   }
 }

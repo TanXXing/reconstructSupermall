@@ -13,7 +13,6 @@ export function getHomeMultidata() {
   })
 }
 
-
 // 获取goodsItem的数据
 export function getHomeGoods(type, page) {
   return request({

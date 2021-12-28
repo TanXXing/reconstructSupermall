@@ -2,7 +2,7 @@
   <div class="home-recommend">
     <div v-for="item in recommed" class="recommend-item">
       <a :href="item.link">
-        <img :src="item.image" alt="" />
+        <img :src="item.image" alt="" @load="imgLoad" />
         <p>{{ item.title }}</p>
       </a>
     </div>
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { homeImgLoadToTabOffsetTop } from 'common/mixin'
+
 export default {
   name: 'HomeRecommend',
   props: {
@@ -22,7 +24,9 @@ export default {
   },
   data() {
     return {}
-  }
+  },
+  mixins: [homeImgLoadToTabOffsetTop],
+  methods: {}
 }
 </script>
 

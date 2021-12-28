@@ -10,7 +10,7 @@ export function debounce(func, timeDelay = 500) {
     timerId = setTimeout(() => {
       func.call(this, ...args)
       // 验证使用防抖策略后，refresh的次数
-      console.log('图片加载的实际次数');
+      // console.log('图片加载的实际次数');
     }, timeDelay)
   }
 }

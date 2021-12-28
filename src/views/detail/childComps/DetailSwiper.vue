@@ -1,9 +1,7 @@
 <template>
-  <swiper>
-    <swiper-item v-for="item in banner">
-      <a :href="item.link">
-        <img :src="item.image" alt="" @load="imgLoad" />
-      </a>
+  <swiper class="detail-swiper">
+    <swiper-item class="swiper-item" v-for="item in topImages">
+      <img :src="item" alt="" />
     </swiper-item>
   </swiper>
 </template>
@@ -11,12 +9,10 @@
 <script>
 import { Swiper, SwiperItem } from 'components/common/swiper/index'
 
-import { homeImgLoadToTabOffsetTop } from 'common/mixin'
-
 export default {
-  name: 'HomeSwiper',
+  name: 'DetailSwiper',
   props: {
-    banner: {
+    topImages: {
       type: Array,
       default() {
         return []
@@ -29,13 +25,15 @@ export default {
   },
   data() {
     return {}
-  },
-  mixins: [homeImgLoadToTabOffsetTop],
-  methods: {}
+  }
 }
 </script>
 
 <style lang='scss' scoped>
+.detail-swiper {
+  .swiper-item {
+    width: 100%;
+    height: 300px;
+  }
+}
 </style>
-
-

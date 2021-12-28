@@ -44,6 +44,7 @@ export default {
 
 <style lang='scss' scoped>
 .tab-control {
+  width: 100%;
   .tab-control-item {
     span {
       padding-bottom: 3px;

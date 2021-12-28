@@ -39,7 +39,7 @@ export default {
   methods: {
     tabBarItemClick() {
       // 进行路由的跳转(路由从哪获取呢？)
-      this.$router.replace({ path: this.path })
+      this.$router.push({ path: this.path })
     }
   }
 }
