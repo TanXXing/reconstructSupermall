@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="right">
-      <div class="add-cart right-item">
+      <div class="add-cart right-item" @click="cartClick">
         <div class="cart-text">加入购物车</div>
       </div>
       <div class="buy right-item">
@@ -31,11 +31,16 @@ export default {
   components: {},
   data() {
     return {}
+  },
+  methods: {
+    cartClick() {
+      this.$emit('cartClick')
+    }
   }
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .detail-bottom-bar {
   display: flex;
   position: relative;
@@ -53,7 +58,7 @@ export default {
         display: block;
         width: 22px;
         height: 22px;
-        // background-image: url('../../../assets/img/detail/detail_bottom.png');
+        //background-image: url('../../../assets/img/detail/detail_bottom.png');
         background-image: url('~assets/img/detail/detail_bottom.png');
         background-repeat: no-repeat;
         background-origin: content-box;

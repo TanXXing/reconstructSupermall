@@ -8,18 +8,17 @@
 </template>
 
 <script>
-//导入子组件
-import MainTabBar from 'components/context/mainTabBar/MainTabBar.vue'
+  //导入子组件
+  import MainTabBar from 'components/context/mainTabBar/MainTabBar.vue'
 
-export default {
-  name: 'App',
-  components: {
-    MainTabBar
+  export default {
+    name: 'App',
+    components: {
+      MainTabBar
+    }
   }
-}
 </script>
 
-<style lang='scss' scoped>
-// 导入样式
-@import 'assets/css/base.css';
+<style lang="scss" scoped>
+  @import 'assets/css/base.css';
 </style>

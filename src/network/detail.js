@@ -22,7 +22,7 @@ export function getRecommend() {
 // 进行数据的整合
 
 // 对基本信息进行整合
-export class GoodsBaseInfo{
+export class GoodsBaseInfo {
   constructor(columns, shopInfo, itemInfo) {
     // columns[2] = shopInfo.services[4].name;
     this.columns = columns;
@@ -48,3 +48,13 @@ export class GoodsParams {
 }
 
 
+// 对加入购物车的商品的信息进行整合
+export class CartGoodsInfo {
+  constructor(itemInfo, iid) {
+    this.title = itemInfo.title;
+    this.desc = itemInfo.desc;
+    this.price = itemInfo.lowPrice;
+    this.image = itemInfo.topImages[0];
+    this.iid = iid;
+  }
+}

@@ -38,8 +38,8 @@ export default {
       this.$bus.$emit('goodsItemLoading')
     },
     goodsItemClick() {
-      console.log('goodItemClick点击了')
-      console.log(this.goodsItem.iid)
+      //console.log('goodItemClick点击了')
+      //console.log(this.goodsItem.iid)
       // 点击后，进行路由动态路由匹配以及
       /* this.$router.push({
         path: `/user/${this.goodsItem.iid}`

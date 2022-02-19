@@ -1,0 +1,7 @@
+export const ADD_CART = "addCart"
+export const ADD_ONE_COUNT = "addOneCount"
+export const ADD_ONE_KIND = "addOneKind"
+export const BTN_ADD_ONE_COUNT = "btnAddOneCount"
+export const BTN_DECREASE_ONE_COUNT = "btnDecreaseOneCount"
+export const changeIsChecked = "changeIsChecked"
+export const changeAllCheckState = "changeAllCheckState"
